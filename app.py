@@ -36,6 +36,26 @@ with st.sidebar:
 
 sample = Path(__file__).parent / 'sample_props.csv'
 st.subheader('1 · Load player props')
+st.subheader("Live Sports Odds")
+
+sport_choice = st.selectbox(
+    "Choose your sport",
+    ["NBA", "MLB"]
+)
+
+sport_keys = {
+    "NBA": "basketball_nba",
+    "MLB": "baseball_mlb"
+}
+
+if st.button("Fetch Live Odds"):
+    try:
+        live_data = fetch_live_odds(
+            sport_keys[sport_choice]
+        )
+        st.write(live_data)
+    except Exception as e:
+        st.error(f"Could not load odds: {e}")
 upload = st.file_uploader('Upload CSV (or use included fictional example)', type='csv')
 try:
     raw = pd.read_csv(upload if upload is not None else sample)
