@@ -3,6 +3,18 @@ import pandas as pd
 from pathlib import Path
 from engine import validate, simulate, sgp_portfolio, american_to_decimal
 
+import requests
+
+@st.cache_data(ttl=1800)
+def fetch_live_odds(sport_key):
+    response = requests.get(
+        "https://api.theoddsapi.com/odds/",
+        headers={"x-api-key": st.secrets["ODDS_API_KEY"]},
+        params={"sport_key": sport_key},
+        timeout=15
+    )
+    response.raise_for_status()
+    return response.json()
 st.set_page_config(page_title='EdgeLab | Prop Optimizer', page_icon='📊', layout='wide')
 st.markdown('''<style>
 .block-container {padding-top:1.2rem; max-width:1100px}
