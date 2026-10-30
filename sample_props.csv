@@ -1,0 +1,17 @@
+sport,game_id,player,team,market,side,line,american_odds,projection,std_dev
+NFL,NFL-DEMO-1,Sample QB A,ALP,Passing Yards,OVER,224.5,-110,238,48
+NFL,NFL-DEMO-1,Sample WR A,ALP,Receiving Yards,OVER,54.5,-115,62,24
+NFL,NFL-DEMO-1,Sample RB A,ALP,Rushing Yards,OVER,58.5,-110,63,22
+NFL,NFL-DEMO-1,Sample WR B,BET,Receiving Yards,UNDER,69.5,-105,63,27
+NBA,NBA-DEMO-1,Sample Guard A,ALP,Points,OVER,19.5,-115,22,7
+NBA,NBA-DEMO-1,Sample Center A,ALP,Rebounds,OVER,8.5,-110,10,3
+NBA,NBA-DEMO-1,Sample Guard B,BET,Assists,UNDER,7.5,-105,6.5,2.5
+NBA,NBA-DEMO-1,Sample Wing B,BET,Points,OVER,15.5,-110,17,6
+MLB,MLB-DEMO-1,Sample Batter A,ALP,Total Bases,OVER,1.5,+120,1.7,1.2
+MLB,MLB-DEMO-1,Sample Batter B,ALP,Hits,OVER,0.5,-145,1.1,0.8
+MLB,MLB-DEMO-1,Sample Pitcher B,BET,Strikeouts,OVER,5.5,-110,6.1,2.1
+MLB,MLB-DEMO-1,Sample Batter C,BET,Hits,UNDER,1.5,-120,1.0,0.8
+NHL,NHL-DEMO-1,Sample Skater A,ALP,Shots on Goal,OVER,2.5,-110,3.1,1.4
+NHL,NHL-DEMO-1,Sample Skater B,ALP,Points,OVER,0.5,+115,0.8,0.7
+NHL,NHL-DEMO-1,Sample Skater C,BET,Shots on Goal,UNDER,3.5,-115,2.8,1.3
+NHL,NHL-DEMO-1,Sample Skater D,BET,Shots on Goal,OVER,1.5,-130,2.2,1.1
