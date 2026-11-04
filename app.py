@@ -5,12 +5,17 @@ from engine import validate, simulate, sgp_portfolio, american_to_decimal
 
 import requests
 
+
 @st.cache_data(ttl=1800)
 def fetch_live_odds(sport_key):
     response = requests.get(
-        "https://api.theoddsapi.com/odds/",
-        headers={"x-api-key": st.secrets["ODDS_API_KEY"]},
-        params={"sport_key": sport_key},
+        f"https://api.the-odds-api.com/v4/sports/{sport_key}/odds/",
+        params={
+            "apiKey": st.secrets["ODDS_API_KEY"],
+            "regions": "us",
+            "markets": "h2h,spreads,totals",
+            "oddsFormat": "american"
+        },
         timeout=15
     )
     response.raise_for_status()
